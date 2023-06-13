@@ -17,5 +17,7 @@ public interface pruebaRepository extends JpaRepository<prueba, Integer>
     List<prueba> findByNombre(String nombre);
 
     List<prueba> findByApellido(String apellido);
+
+    List<prueba> findByEdad(int edad);
     
 }
