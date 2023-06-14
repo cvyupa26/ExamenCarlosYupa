@@ -20,4 +20,5 @@ public interface pruebaRepository extends JpaRepository<prueba, Integer>
 
     List<prueba> findByEdad(int edad);
     
+    List<prueba> findByDireccion(String direccion);
 }
