@@ -12,7 +12,7 @@ public class SEG_PERFIL {
 
     @Id
     @Column(name = "COD_PERFIL", nullable = false, length = 8)
-    private Integer cod_perfil;
+    private String cod_perfil;
     @Column(name = "NOMBRE", nullable = false, length = 100)
     private String nombre;
 
@@ -22,13 +22,13 @@ public class SEG_PERFIL {
 
     public SEG_PERFIL() {
     }
-    public SEG_PERFIL(Integer cod_perfil) {
+    public SEG_PERFIL(String cod_perfil) {
         this.cod_perfil = cod_perfil;
     }
-    public Integer getCod_perfil() {
+    public String getCod_perfil() {
         return cod_perfil;
     }
-    public void setCod_perfil(Integer cod_perfil) {
+    public void setCod_perfil(String cod_perfil) {
         this.cod_perfil = cod_perfil;
     }
     public String getNombre() {
