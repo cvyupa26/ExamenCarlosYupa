@@ -21,6 +21,8 @@ public class SEG_USUARIOService {
         return this.usuariorepository.findById(id);
     }
 
+    
+
     @Transactional
     public SEG_USUARIO create(SEG_USUARIO usuario) {
         SEG_USUARIO usuariotmp = this.usuariorepository.findByMail(usuario.getMail());
