@@ -20,6 +20,8 @@ public class SEG_PERFILService {
         return this.perfilrepository.finfindBynombreOrderBynombre(nombre);
     }
         
-    
+    public SEG_PERFIL createPerfil(SEG_PERFIL perfil) {
+        return this.perfilrepository.save(perfil);
+    }
     
 }
