@@ -16,8 +16,8 @@ import jakarta.persistence.Version;
 public class SEG_USUARIO {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID_USUARIO", nullable = false)
-    private Integer id_usuario;
+    @Column(name = "COD_USUARIO", nullable = false)
+    private Integer codigousuario;
     @Column(name = "MAIL", nullable = false, length = 128)
     private String mail;
     @Column(name = "CLAVE", nullable = false, length = 64)
@@ -38,16 +38,16 @@ public class SEG_USUARIO {
     public SEG_USUARIO() {
     }
 
-    public SEG_USUARIO(Integer id_usuario) {
-        this.id_usuario = id_usuario;
+    public SEG_USUARIO(Integer codigousuario) {
+        this.codigousuario = codigousuario;
     }
 
-    public Integer getId_usuario() {
-        return id_usuario;
+    public Integer getCodigousuario() {
+        return codigousuario;
     }
 
-    public void setId_usuario(Integer id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setCodigousuario(Integer codigousuario) {
+        this.codigousuario = codigousuario;
     }
 
     public String getMail() {
@@ -110,7 +110,7 @@ public class SEG_USUARIO {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((id_usuario == null) ? 0 : id_usuario.hashCode());
+        result = prime * result + ((codigousuario == null) ? 0 : codigousuario.hashCode());
         return result;
     }
 
@@ -123,19 +123,23 @@ public class SEG_USUARIO {
         if (getClass() != obj.getClass())
             return false;
         SEG_USUARIO other = (SEG_USUARIO) obj;
-        if (id_usuario == null) {
-            if (other.id_usuario != null)
+        if (codigousuario == null) {
+            if (other.codigousuario != null)
                 return false;
-        } else if (!id_usuario.equals(other.id_usuario))
+        } else if (!codigousuario.equals(other.codigousuario))
             return false;
         return true;
     }
 
     @Override
     public String toString() {
-        return "SEG_USUARIO [id_usuario=" + id_usuario + ", mail=" + mail + ", clave=" + clave + ", nombre=" + nombre
-                + ", intentosfallidos=" + intentosfallidos + ", sueldo=" + sueldo + ", fechanacimiento="
+        return "SEG_USUARIO [codigousuario=" + codigousuario + ", mail=" + mail + ", clave=" + clave + ", nombre="
+                + nombre + ", intentosfallidos=" + intentosfallidos + ", sueldo=" + sueldo + ", fechanacimiento="
                 + fechanacimiento + ", version=" + version + "]";
     }
+
+  
+
+   
 
 }
